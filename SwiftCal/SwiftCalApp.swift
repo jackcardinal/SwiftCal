@@ -13,8 +13,16 @@ struct SwiftCalApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            TabView {
+                CalendarView()
+                    .tabItem { Label("Calendar", systemImage: "calendar") }
+                    .foregroundColor(.accentColor)
+                StreakView()
+                    .tabItem { Label("Streak", systemImage: "swift") }
+                    .foregroundColor(.accentColor)
+
+            }
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
