@@ -7,6 +7,7 @@
 
 import WidgetKit
 import SwiftUI
+import CoreData
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -40,9 +41,42 @@ struct SimpleEntry: TimelineEntry {
 
 struct SwiftCalWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
+    let columns = Array(repeating: GridItem(.flexible()), count: 7)
     var body: some View {
-        Text(entry.date, style: .time)
+        HStack {
+            VStack {
+                VStack {
+                    Text("31")
+                        .font(.system(size: 70, weight: .bold, design: .rounded))
+                        .foregroundColor(.orange)
+                        //.foregroundColor(streakValue > 0 ? .orange : .pink)
+                    Text("Study Streak")
+                        .font(.caption).bold()
+                        .foregroundColor(.secondary)
+                }
+            }
+            VStack {
+                CalendarHeaderView(font: .caption)
+                
+                LazyVGrid(columns: columns) {
+                    ForEach(0..<31) { _ in
+                        Text("31")
+                            .bold()
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.secondary)
+                            .background(
+                                Circle()
+                                    .foregroundColor(.orange.opacity(0.3))
+                            )
+                    }
+                }
+               
+            }
+            .padding(.leading)
+            
+        }
+        .padding()
     }
 }
 
@@ -61,6 +95,6 @@ struct SwiftCalWidget: Widget {
 struct SwiftCalWidget_Previews: PreviewProvider {
     static var previews: some View {
         SwiftCalWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
