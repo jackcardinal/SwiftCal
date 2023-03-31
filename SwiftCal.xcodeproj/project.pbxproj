@@ -11,6 +11,8 @@
 		4D39A64E29D269F7002F760A /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DFE8F29C257D500A25CB6 /* Date+Ext.swift */; };
 		4D39A65029D26CAF002F760A /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D39A64F29D26CAF002F760A /* CalendarHeaderView.swift */; };
 		4D39A65129D26CAF002F760A /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D39A64F29D26CAF002F760A /* CalendarHeaderView.swift */; };
+		4D39A65229D4B4A3002F760A /* SwiftCal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BB8F29BAD8090035AEA7 /* SwiftCal.xcdatamodeld */; };
+		4D39A65329D4B7C7002F760A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BB8D29BAD8090035AEA7 /* Persistence.swift */; };
 		4D6F21ED29CA4D3D003A9895 /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F21EC29CA4D3D003A9895 /* StreakView.swift */; };
 		4DD9BB8529BAD8080035AEA7 /* SwiftCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BB8429BAD8080035AEA7 /* SwiftCalApp.swift */; };
 		4DD9BB8729BAD8080035AEA7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9BB8629BAD8080035AEA7 /* CalendarView.swift */; };
@@ -53,6 +55,7 @@
 /* Begin PBXFileReference section */
 		4D0DFE8F29C257D500A25CB6 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		4D39A64F29D26CAF002F760A /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		4D39A65429D51148002F760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4D6F21EC29CA4D3D003A9895 /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
 		4D7681B829CCEE99005DF439 /* SwiftCal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftCal.entitlements; sourceTree = "<group>"; };
 		4D7681B929CCEF08005DF439 /* SwiftCalWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftCalWidgetExtension.entitlements; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		4DD9BB8329BAD8080035AEA7 /* SwiftCal */ = {
 			isa = PBXGroup;
 			children = (
+				4D39A65429D51148002F760A /* Info.plist */,
 				4D0B2E3129D08199005724CC /* Screens */,
 				4D0B2E3029D08160005724CC /* Extensions */,
 				4D7681B829CCEE99005DF439 /* SwiftCal.entitlements */,
@@ -296,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D39A65229D4B4A3002F760A /* SwiftCal.xcdatamodeld in Sources */,
 				4DDA676829CBA37400BDE6AD /* SwiftCalWidget.swift in Sources */,
 				4D39A65129D26CAF002F760A /* CalendarHeaderView.swift in Sources */,
+				4D39A65329D4B7C7002F760A /* Persistence.swift in Sources */,
 				4DDA676629CBA37400BDE6AD /* SwiftCalWidgetBundle.swift in Sources */,
 				4D39A64E29D269F7002F760A /* Date+Ext.swift in Sources */,
 			);
@@ -441,7 +447,7 @@
 				DEVELOPMENT_TEAM = 5SWC877QJX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftCal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -472,7 +478,7 @@
 				DEVELOPMENT_TEAM = 5SWC877QJX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftCal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
