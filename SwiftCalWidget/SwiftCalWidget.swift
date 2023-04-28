@@ -91,8 +91,10 @@ struct SwiftCalWidgetEntryView : View {
                                     .frame(maxWidth: .infinity)
                                     .background {
                                         Circle()
+                                            //.strokeBorder(lineWidth: 2, antialiased: false)
                                             .foregroundColor(day.didStudy ? .orange.opacity(0.3) : .orange.opacity(0))
-                                            .scaleEffect(2)
+                                            .scaleEffect(1.5)
+                                        
                                     }
                                     .padding(0.5)
                             }
@@ -137,6 +139,7 @@ struct SwiftCalWidget: Widget {
         }
         .configurationDisplayName("Calendar Widget")
         .description("This shows your calendar")
+        .supportedFamilies([.systemMedium])
     }
 }
 
