@@ -32,7 +32,7 @@ struct CalendarView: View {
                         } else {
                             Text(day.date!.formatted(.dateTime.day()))
                                 .fontWeight(.bold)
-                                .foregroundColor(day.didStudy ? .orange : .secondary)
+                                .foregroundColor(day.didStudy ? day.date!.dayInt == Date().dayInt ? .red  : .orange : .secondary)
                                 .frame(maxWidth: .infinity, minHeight: 40)
                                 .background {
                                     Circle()
